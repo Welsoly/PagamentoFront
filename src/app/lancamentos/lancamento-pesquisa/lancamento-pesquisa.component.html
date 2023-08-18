@@ -1,0 +1,28 @@
+<!--Form lançamento-->
+<section class="flex-container">
+  <h2>Lançamento</h2>
+
+  <form class="form">
+  <mat-form-field appearance="outline">
+    <mat-label>Descrição</mat-label>
+    <input name="descricao" matInput type="text" [(ngModel)]="filtro.descricao">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="vinte-cinco-per-width">
+    <mat-label>Vencimento</mat-label>
+    <mat-date-range-input [rangePicker]="picker">
+      <input name="dataVencimentoInicio" matStartDate placeholder="De" [(ngModel)]="filtro.dataVencimentoInicio">
+      <input name="dataVencimentoFim" matEndDate placeholder="Até" [(ngModel)]="filtro.dataVencimentoFim">
+    </mat-date-range-input>
+    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  </mat-form-field>
+
+  <div class="btn">
+  <button (click)="pesquisarLancamentos()" mat-raised-button color="primary">Pesquisar</button>
+  </div>
+  </form>
+</section>
+
+<app-lancamento-grid [dataSource]="lancamentoDataSource" [responsePageable]="responsePageable" [filtro]="filtro"></app-lancamento-grid>
