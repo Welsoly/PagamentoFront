@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "pagamentos-front2": {
+    "ProjetoFront": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/pagamentos-front2",
+            "outputPath": "dist/projeto-front",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -61,10 +61,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "pagamentos-front2:build:production"
+              "browserTarget": "ProjetoFront:build:production"
             },
             "development": {
-              "browserTarget": "pagamentos-front2:build:development"
+              "browserTarget": "ProjetoFront:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -72,7 +72,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "pagamentos-front2:build"
+            "browserTarget": "ProjetoFront:build"
           }
         },
         "test": {
@@ -93,11 +93,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
   },
   "cli": {
-    "analytics": "3592d4ef-f9fe-4073-a09a-bedc484c3a96"
+    "analytics": "74dce016-7359-4ba8-b9e7-4dd2430b11db"
   }
 }

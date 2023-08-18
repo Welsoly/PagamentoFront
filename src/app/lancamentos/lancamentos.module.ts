@@ -12,16 +12,12 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatButtonToggleModule} from '@angular/material/button-toggle';
 
-import { CurrencyMaskModule } from 'ng2-currency-mask';
-
 import { LancamentoCadastroComponent } from './lancamento-cadastro/lancamento-cadastro.component';
 import { LancamentoPesquisaComponent } from './lancamento-pesquisa/lancamento-pesquisa.component';
 import { LancamentoGridComponent } from './lancamento-grid/lancamento-grid.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { LancamentoService } from './lancamento.service';
-
+import { CurrencyMaskModule } from 'ng2-currency-mask';
 
 @NgModule({
   declarations: [
@@ -33,6 +29,8 @@ import { LancamentoService } from './lancamento.service';
     CommonModule,
     RouterModule,
     FormsModule,
+
+
     MatButtonModule,
     MatIconModule,
     MatInputModule,
@@ -43,17 +41,12 @@ import { LancamentoService } from './lancamento.service';
     MatPaginatorModule,
     MatTooltipModule,
     MatButtonToggleModule,
-    HttpClientModule,
-
+    
     CurrencyMaskModule
-
   ],
   exports: [
     LancamentoCadastroComponent,
     LancamentoPesquisaComponent
-  ],
-  providers: [
-    LancamentoService
   ]
 })
 export class LancamentosModule { }
